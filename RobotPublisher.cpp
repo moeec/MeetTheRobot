@@ -5,6 +5,13 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
+/*
+
+The lambda function is used within the RobotPublisher class to define the timer_callback. 
+This lambda function is responsible for creating and publishing messages periodically.
+
+*/
+
 using namespace std::chrono_literals;
 
 class MinimalPublisher : public rclcpp::Node
