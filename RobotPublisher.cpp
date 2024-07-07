@@ -10,6 +10,13 @@
 The lambda function is used within the RobotPublisher class to define the timer_callback. 
 This lambda function is responsible for creating and publishing messages periodically.
 
+
+[this]: This capture clause allows the lambda function to capture the this pointer, 
+enabling it to access the member variables (pub_ and count_) and member functions 
+(get_logger()) of the RobotPublisher class.
+() -> void: This specifies that the lambda function takes no parameters and returns void.
+The function body creates a message, sets its data, logs the message, and publishes it.
+
 */
 
 using namespace std::chrono_literals;
