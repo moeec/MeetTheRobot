@@ -25,24 +25,27 @@ be a function pointer, a function object, or a lambda expression.
 
 */
 
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
 int main() {
     std::vector<int> numbers = {1, 2, 3, 4, 5};
 
-    // Print each number in the vector
-    std::for_each(numbers.begin(), numbers.end(), [](int n) {
+    // Lambda that prints each number
+    auto print = [](int n) {
         std::cout << n << ' ';
-    });
+    };
+
+    std::for_each(numbers.begin(), numbers.end(), print);
     std::cout << std::endl;
 
-    // Add 1 to each element in the vector
+    // Lambda that adds 1 to each element
     std::for_each(numbers.begin(), numbers.end(), [](int &n) {
         n += 1;
     });
 
-    // Print each number in the vector again to see the changes
-    std::for_each(numbers.begin(), numbers.end(), [](int n) {
-        std::cout << n << ' ';
-    });
+    std::for_each(numbers.begin(), numbers.end(), print);
     std::cout << std::endl;
 
     return 0;
