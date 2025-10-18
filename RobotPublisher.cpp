@@ -1,10 +1,3 @@
-#include <chrono>
-#include <memory>
-#include <string>
-
-#include "rclcpp/rclcpp.hpp"
-#include "std_msgs/msg/string.hpp"
-
 /*
 
 This code sets up a ROS 2 publisher that periodically sends a message to a topic. Here's a step-by-step summary of what happens:
@@ -33,6 +26,7 @@ The function body creates a message, sets its data, logs the message, and publis
 #include <chrono>
 #include <memory>
 #include <string>
+
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
